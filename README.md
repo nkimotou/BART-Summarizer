@@ -58,29 +58,34 @@ All of my commands are executed by accessing the terminal inside the IDE.
 
 I'm starting on a working branch in the production repo. 
 
-Step 1:
+Step 1: Package and directory
 > Create a package that will contain everything needed to run the application. In this case,
 > mine is called "Summarizer". When you create a package, it should auto creat your init.py file for you.
 
-Step 2:
+Step 2: Interpreter settings
 >Make sure your IDE has interpreter settings set to allow a virtual environment, or venv, to be used. 
 > This is what it should look like:
 > <img height="200" src="/Users/nanamikimoto/Desktop/Screenshot 2024-03-25 at 10.29.47 PM.png" width="400"/>
 
-Step 3:
-> Create the files required inside your package. For this project, I want to create three:
+Step 3: Create the files required inside your package
+> For this project, I want to create three:
 > 1. My app file that has my summarizer code in it
 > 2. My Dockerfile that has instructions to pass to Docker, in order to build the Docker Image.
 > 3. My requirements.txt that has my required dependencies in order for the application to run containerized in Docker.
 > 
 > The structure can be seen above.
 
-Step 4:
->Set up Docker. If you don't already have it installed, you can do so on command line or from
+Step 4: Set up Docker
+> If you don't already have it installed, you can do so on command line or from
 > Docker's website. Once you've got your app package and files set up, navigate to your package directory
 > using the terminal. 
 > 
 > <img height="100" src="/Users/nanamikimoto/Desktop/pcharmnav.png" width="500"/>
+> Once in the correct path, execute the following command:
+
+`docker build -t <docker_image_name>`
+>The terminal output should look like this:
+> <img height="300" src="/Users/nanamikimoto/Desktop/pycharmterm.png" width="700"/>
 
 ## Documentation
 Hugging Face BART model for summarization:
