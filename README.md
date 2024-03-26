@@ -26,3 +26,17 @@ Create a FastAPI service that loads a pre-trained Hugging Face NLP model to do t
 -Containerize the FastAPI service using Docker, and provide a Dockerfile and instructions on how to build and run the Docker container.
 
 -Include a README that explains how to run a service.
+******
+## Process
+-Python environment and dependencies 
+
+I'm using JetBrains PyCharm IDE running Python 3.12 on a 2023 Mac Studio M2 Max 32gb ram. 
+
+## Documentation
+Hugging Face BART model for summarization:
+https://huggingface.co/facebook/bart-large-cnn
+
+Installing and using FastAPI: https://fastapi.tiangolo.com/tutorial/
+
+Installing and using Docker to containerize apps: https://docs.docker.com/get-started/
+
