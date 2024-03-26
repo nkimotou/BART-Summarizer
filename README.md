@@ -26,11 +26,61 @@ Create a FastAPI service that loads a pre-trained Hugging Face NLP model to do t
 -Containerize the FastAPI service using Docker, and provide a Dockerfile and instructions on how to build and run the Docker container.
 
 -Include a README that explains how to run a service.
+## BONUS
+After generating the summarized text, compress it using the following algorithm and return the compressed summary string.
+
+**Compress Summary Endpoint:** 
+
+Implement a POST endpoint /compress_summary that accepts the same input as /summarize and returns the compressed summary string.
+
+**The compression algorithm is as follows:**
+
+For each group of consecutive repeating characters in the summarized text:
+
+-If the group's length is 1, append the character to the compressed string.
+
+-Otherwise, append the character followed by the group's length.
+
+-The compressed string should be returned in the JSON response from the /compress_summary endpoint.’
+
+**Original Summary:** 
+`This committee meets annually to assess the effectiveness of policies on environmental protection.`
+
+**Compressed Summary:**
+`Thus com2it2e2 me2ts an2ual2y to as2es2 the ef2ectivenes2 of policies on environmental protection.`
+
 ******
 ## Process
--Python environment and dependencies 
+Python environment and dependencies:
 
 I'm using JetBrains PyCharm IDE running Python 3.12 on a 2023 Mac Studio M2 Max 32gb ram. 
+All of my commands are executed by accessing the terminal inside the IDE. 
+
+I'm starting on a working branch in the production repo. 
+
+Step 1:
+> Create a package that will contain everything needed to run the application. In this case,
+> mine is called "Summarizer". When you create a package, it should auto creat your init.py file for you.
+
+Step 2:
+>Make sure your IDE has interpreter settings set to allow a virtual environment, or venv, to be used. 
+> This is what it should look like:
+> <img height="200" src="/Users/nanamikimoto/Desktop/Screenshot 2024-03-25 at 10.29.47 PM.png" width="400"/>
+
+Step 3:
+> Create the files required inside your package. For this project, I want to create three:
+> 1. My app file that has my summarizer code in it
+> 2. My Dockerfile that has instructions to pass to Docker, in order to build the Docker Image.
+> 3. My requirements.txt that has my required dependencies in order for the application to run containerized in Docker.
+> 
+> The structure can be seen above.
+
+Step 4:
+>Set up Docker. If you don't already have it installed, you can do so on command line or from
+> Docker's website. Once you've got your app package and files set up, navigate to your package directory
+> using the terminal. 
+> 
+> <img height="100" src="/Users/nanamikimoto/Desktop/pcharmnav.png" width="500"/>
 
 ## Documentation
 Hugging Face BART model for summarization:
