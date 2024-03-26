@@ -56,6 +56,12 @@ Python environment and dependencies:
 I'm using JetBrains PyCharm IDE running Python 3.12 on a 2023 Mac Studio M2 Max 32gb ram. 
 All of my commands are executed by accessing the terminal inside the IDE. 
 
+**Imports and dependencies:**
+-FastAPI package to import the FastAPI class to build the service, HTTPException to flag web status codes.
+-Hugging Face transformers package to import the pipeline function for running tasks against models.
+-Pydantic package to import the BaseModel class for converting Python objects into usable JSON.
+-Uvicorn to be used alongside FastAPI to run the web application in the localhost. 
+
 I'm starting on a working branch in the production repo. 
 
 Step 1: Package and directory
@@ -87,6 +93,26 @@ Step 4: Set up Docker
 >The terminal output should look like this:
 > <img height="300" src="/Users/nanamikimoto/Desktop/pycharmterm.png" width="700"/>
 
+Step 5: Run Docker 
+> After setting up docker and building the image, run the container using the following command:
+
+`docker run -d -p <your_port:your_port> <docker_image_name>`
+
+> Here is what mine looks like:
+> <img height="20" src="/Users/nanamikimoto/Desktop/Screenshot 2024-03-25 at 11.28.22 PM.png" width="4000"/>
+> Check that your container is running properly by using the following command:
+
+`docker ps`
+> This will return information about your running containers and their status.
+
+Step 6: Check your localhost!
+>You should now be able to access your service through your localhost. 
+
+`http://localhost:<your_port>/<docker_image_name>/`
+> In my case, mine looks like this:
+
+`http://localhost:8000/ai_summarizer/`
+*****
 ## Documentation
 Hugging Face BART model for summarization:
 https://huggingface.co/facebook/bart-large-cnn

@@ -1,11 +1,15 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 from transformers import pipeline
+from pydantic import BaseModel
 
-# Initialize FastAPI app
+"""
+This app works in conjunction with a Docker image to run a service containerized. 
+"""
+
+# Initialize FastAPI
 app = FastAPI()
 
-# Load pre-trained BART summarization model
+# Load BART summarization model
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 # Create Pydantic model for request body
