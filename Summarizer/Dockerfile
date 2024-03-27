@@ -1,4 +1,4 @@
-# This file instructs Docker how to build the Docker Image and containerize the FastApi app
+# This file instructs Docker how to build the Docker Image and containerize the FastApi application
 
 # Use Python 3.9 image to build the Docker image
 FROM python:3.9-slim
@@ -22,5 +22,5 @@ COPY . /app/
 # Expose port 8000 to be accessed publically
 EXPOSE 8000
 
-# Run your FastAPi application
+# Run your FastAPI application
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

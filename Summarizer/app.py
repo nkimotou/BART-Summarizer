@@ -5,6 +5,7 @@ from pydantic import BaseModel
 """
 This localhost application exposes an API that can receive user-provided text inputs 
 and summarize them using the Hugging Face BART model. 
+
 There is an extended functionality to provide a compressed summary based on consecutive
 repeating characters in the user-provided text. 
 
