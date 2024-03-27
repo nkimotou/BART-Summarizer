@@ -8,7 +8,7 @@ Rad AI ML infrastructure engineer challenge
 - [Developer Notes](#developer-notes)
 - [Process](#process)
 - [How to run this application locally](#how-to-run-this-application-locally)
-- [How to create your own version from scratch!](#how-to-create-your-own-version-from-scratch-!)
+- [How to create your own version from scratch](#how-to-create-your-own-version-from-scratch)
 - [Documentation](#documentation)
 
 ## Instructions
@@ -147,7 +147,7 @@ completed. To export the application, I will download the zipped file.
 `http://localhost:8000/ai_summarizer/`
 
 ***
-## How to create your own version from scratch!
+## How to create your own version from scratch
 **Step 1:** Package and directory
 > Create a package that will contain everything needed to run the application. In this case,
 > mine is called "Summarizer". When you create a package, it should auto create your init.py file for you.
