@@ -252,9 +252,9 @@ All of my commands are executed by accessing the terminal inside the IDE.
 >
 > Here is the output of the included tester files:
 > 
-> <img height="200" src="summary_tester.png" width="1400"/>
+> <img height="100" src="summary_tester.png" width="1400"/>
 > 
-> <img height="200" src="compressed_tester.png" width="1400"/>
+> <img height="100" src="compressed_tester.png" width="1400"/>
 ***
 
 ## Documentation
