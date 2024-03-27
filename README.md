@@ -181,9 +181,9 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > 
 > Here is the output of the included tester files:
 > 
-> <img height="100" src="summary_tester.png" width="900"/>
+> <img height="150" src="summary_tester.png" width="900"/>
 > 
-> <img height="100" src="compressed_tester.png" width="900"/>
+> <img height="150" src="compressed_tester.png" width="900"/>
 
 
 ***
@@ -252,9 +252,9 @@ All of my commands are executed by accessing the terminal inside the IDE.
 >
 > Here is the output of the included tester files:
 > 
-> <img height="50" src="summary_tester.png" width="500"/>
+> <img height="150" src="summary_tester.png" width="900"/>
 > 
-> <img height="50" src="compressed_tester.png" width="500"/>
+> <img height="150" src="compressed_tester.png" width="900"/>
 ***
 
 ## Documentation
