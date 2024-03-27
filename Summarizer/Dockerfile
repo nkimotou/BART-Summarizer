@@ -1,24 +1,26 @@
-# Use the official Python image as a base image
+# This file instructs Docker how to build the Docker Image and containerize the FastApi app
+
+# Use Python 3.9 image to build the Docker image
 FROM python:3.9-slim
 
-# Set environment variables
+# Set up Python environment
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Set the working directory in the container
+# Create a working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container at /app
+# Copy the requirements.txt file into the docker container in your app folder
 COPY requirements.txt /app/
 
-# Install any dependencies specified in requirements.txt
+# Install dependencies from the requirements.txt file
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the current directory contents into the container at /app
+# Copy contents of the directory into your app folder
 COPY . /app/
 
-# Expose port 8000 to the outside world
+# Expose port 8000 to be accessed publically
 EXPOSE 8000
 
-# Command to run the FastAPI app
+# Run your FastAPi application
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
