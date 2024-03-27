@@ -57,7 +57,7 @@ For each group of consecutive repeating characters in the summarized text:
 `This committee meets annually to assess the effectiveness of policies on environmental protection.`
 
 **Compressed Summary:**
-`Thus com2it2e2 me2ts an2ual2y to as2es2 the ef2ectivenes2 of policies on environmental protection.`
+`This com2it2e2 me2ts an2ual2y to as2es2 the ef2ectivenes2 of policies on environmental protection.`
 
 ***
 ## Developer Notes
