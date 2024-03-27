@@ -81,7 +81,7 @@ completed. To export the application, I will download the zipped file.
 ***
 ## How to run this application locally 
 **Step 1:** Download this repo as a zip file
-><img height="250" src="zip.png" width="350"/>
+><img height="250" src="zip.png" width="400"/>
 
 **Step 2:** Dependencies
 > Make sure you have the necessary dependencies installed on your machine or inside your Python IDE.
