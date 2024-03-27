@@ -89,7 +89,7 @@ completed. To export the application, I will download the zipped file.
 
 -Uvicorn to be used alongside FastAPI to run the web application in the localhost.
 ***
-## How to run this application locally 
+## How to run this application locally
 **Step 1:** Download this repo as a zip file
 ><img height="250" src="zip.png" width="300"/>
 
