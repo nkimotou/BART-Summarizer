@@ -1,6 +1,16 @@
 # AI_Powered_Summarization
 Rad AI ML infrastructure engineer challenge
 
+## Table of Contents
+
+- [Instructions](#instructions)
+- [Requirements](#requirements)
+- [Developer Notes](#developer-notes)
+- [Process](#process)
+- [How to run this application locally](#how-to-run-this-application-locally)
+- [How to create your own version from scratch!](#how-to-create-your-own-version-from-scratch!)
+- [Documentation](#documentation)
+
 ## Instructions
 Create a FastAPI service that loads a pre-trained Hugging Face NLP model to do text summarization on user-provided text inputs. The service should expose an API to receive a text input and return a summary in a JSON Response.
 
