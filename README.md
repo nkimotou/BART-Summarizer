@@ -8,7 +8,7 @@ Rad AI ML infrastructure engineer challenge
 - [Developer Notes](#developer-notes)
 - [Process](#process)
 - [How to run this application locally](#how-to-run-this-application-locally)
-- [How to create your own version from scratch!](#how-to-create-your-own-version-from-scratch!)
+- [How to create your own version from scratch!](#how-to-create-your-own-version-from-scratch-!)
 - [Documentation](#documentation)
 
 ## Instructions
