@@ -156,7 +156,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > 
 > It should look similar to this:
 > 
-> <img height="300" src="pycharmterm.png" width="500"/>
+> <img height="500" src="pycharmterm.png" width="800"/>
 
 >If you have Docker desktop installed, you can also check the status of your containers that way.
 > 
@@ -181,9 +181,9 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > 
 > Here is the output of the included tester files:
 > 
-> <img height="50" src="summary_tester.png" width="500"/>
+> <img height="100" src="summary_tester.png" width="900"/>
 > 
-> <img height="50" src="compressed_tester.png" width="500"/>
+> <img height="100" src="compressed_tester.png" width="900"/>
 
 
 ***
@@ -227,7 +227,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > This will return information about your running containers and their status.
 > This is what my docker process looks like:
 > 
-> <img height="300" src="pycharmterm.png" width="500"/>
+> <img height="500" src="pycharmterm.png" width="800"/>
 
 >If you have Docker desktop installed, you can also check the status of your containers that way.
 > 
