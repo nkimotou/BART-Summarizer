@@ -162,7 +162,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > 
 > This is what it should look like:
 > 
-> <img height="150" src="container.png" width="400"/>
+> <img height="250" src="container.png" width="600"/>
 
 
 **Step 5:** Check your localhost!
@@ -181,9 +181,9 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > 
 > Here is the output of the included tester files:
 > 
-> <img height="150" src="summary_tester.png" width="900"/>
+> <img height="200" src="summary_tester.png" width="1200"/>
 > 
-> <img height="150" src="compressed_tester.png" width="900"/>
+> <img height="200" src="compressed_tester.png" width="1200"/>
 
 
 ***
@@ -233,7 +233,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > 
 > This is what mine looks like using Docker desktop on Mac:
 > 
-> <img height="150" src="container.png" width="400"/>
+> <img height="250" src="container.png" width="600"/>
 
 
 **Step 5:** Check your localhost!
@@ -252,9 +252,9 @@ All of my commands are executed by accessing the terminal inside the IDE.
 >
 > Here is the output of the included tester files:
 > 
-> <img height="150" src="summary_tester.png" width="900"/>
+> <img height="200" src="summary_tester.png" width="1200"/>
 > 
-> <img height="150" src="compressed_tester.png" width="900"/>
+> <img height="200" src="compressed_tester.png" width="1200"/>
 ***
 
 ## Documentation
