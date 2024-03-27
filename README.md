@@ -5,7 +5,7 @@ Rad AI ML infrastructure engineer challenge
 
 - [Instructions](#instructions)
 - [Requirements](#requirements)
-- [Developer Notes](#developer-notes)
+- [Developer Notes](#developer-notes-and-troubleshooting)
 - [Process](#process)
 - [How to run this application locally](#how-to-run-this-application-locally)
 - [How to create your own version from scratch](#how-to-create-your-own-version-from-scratch)
@@ -60,7 +60,7 @@ For each group of consecutive repeating characters in the summarized text:
 `This com2it2e2 me2ts an2ual2y to as2es2 the ef2ectivenes2 of policies on environmental protection.`
 
 ***
-## Developer Notes
+## Developer notes and troubleshooting
 I've created this with the intention of making it very easy for someone not familiar with the used tools 
 to be able to run this application with no major issues. 
 
@@ -71,14 +71,23 @@ They are similar instructions, save for a few differences in wording and require
 I've left much more frequent comments in the included files than I usually would, in order to explain everything line by line. 
 Ideally, an intern should be able to take this app and fully understand everything from end to end. 
 
-For requirements.txt, you should be able to have your dependencies directly installed by using this command
+**Troubleshooting issues:**
+
+>For requirements.txt, you should be able to have your dependencies directly installed by using this command
 in the Dockerfile: 
 
 `RUN pip install --no-cache-dir -r requirements.txt`
 
-However, I ran into some issues using this method. I directly specified which dependencies to pip install
+>However, I ran into some issues using this method. I directly specified which dependencies to pip install
 depending on what Docker container errors I had. I have left the file the way I am running it locally. You may 
 use either of these methods.
+> 
+> If you run into issues with Docker not showing your running container after using the 'docker ps' command, 
+> check your containers in Docker desktop. You'll be able to see any console errors and resolve those. 
+> typically, it will be import issues. You may have to import other things depending on how your IDE is set up and 
+> what you already have installed. 
+
+
 
 Please reach out to me at [nkimotou@gmail.com](nkimotou@gmail.com) for any questions or clarification. 
 
@@ -132,7 +141,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > 
 > `tf-keras`
 > 
->**Note:** Torch, Tensorflow, and Keras as required to use the BART model from Hugging Face. 
+>**Note:** Torch, Tensorflow, and Keras are required to use the BART model from Hugging Face. 
 
 **Step 4:** Set up Docker, build the image, and run the container
 > If you don't already have it installed, you can do so on command line or from
@@ -171,7 +180,8 @@ All of my commands are executed by accessing the terminal inside the IDE.
 `http://localhost:8000/ai_summarizer/`
 
 >If you're seeing "internal service error", retrace your steps above and make sure your container is still running. 
-> If it's not running, and it's exited, check Docker desktop for any console errors that need to be resolved.
+> If it's not running, and it's exited, check Docker desktop for any console errors that need to be resolved according
+> to the troubleshooting portion above. 
 
 **Step 6:** Test your FastAPI service
 >You can test your service to make sure the summarization process is correctly working by using a Python script
@@ -189,7 +199,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 ***
 ## How to create your own version from scratch
 **Step 1:** Package and directory
-> Create a package that will contain everything needed to run the application. In this case,
+> Create your repo and create a package inside that will contain everything needed to run the application. In this case,
 > mine is called "Summarizer". When you create a package, it should auto create your init.py file for you.
 
 **Step 2:** Interpreter settings
@@ -199,7 +209,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 > <img height="200" src="layout.png" width="400"/>
 
 **Step 3:** Create the files required inside your package
-> For this project, you want to create three files:
+> For this project, you want to create three main files:
 > 1. Your app file that has the summarizer code in it
 > 2. Your Dockerfile that has instructions to pass to Docker, in order to build the Docker Image.
 > 3. Your requirements.txt that has my required dependencies in order for the application to run containerized in Docker.
@@ -208,7 +218,7 @@ All of my commands are executed by accessing the terminal inside the IDE.
 
 **Step 4:** Set up Docker, build the image, and run the container
 > If you don't already have it installed, you can do so on command line or from
-> Docker's website. Navigate to the appropriate package directory inside the unzipped repo file
+> Docker's website. Navigate to the appropriate package directory for your repo
 > using the terminal. 
 > 
 > <img height="100" src="pcharmnav.png" width="600"/>
@@ -240,6 +250,11 @@ All of my commands are executed by accessing the terminal inside the IDE.
 >You should now be able to access your service through your localhost. 
 
 `http://localhost:<your_port>/<docker_image_name>/`
+
+>If you're seeing "internal service error", retrace your steps above and make sure your container is still running. 
+> If it's not running, and it's exited, check Docker desktop for any console errors that need to be resolved according
+> to the troubleshooting portion above. 
+> 
 > In my case, mine looks like this:
 
 `http://localhost:8000/ai_summarizer/`
