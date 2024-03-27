@@ -67,6 +67,15 @@ to be able to run this application with no major issues.
 I've left much more frequent comments in the included files than I usually would, in order to explain everything line by line. 
 Ideally, an intern should be able to take this app and fully understand everything from end to end. 
 
+For requirements.txt, you should be able to have your dependencies directly installed by using this command
+in the Dockerfile: 
+
+`RUN pip install --no-cache-dir -r requirements.txt`
+
+However, I ran into some issues using this method. I directly specified which dependencies to pip install
+depending on what Docker container errors I had. I have left the file the way I am running it locally. You may 
+use either of these methods. 
+
 Please reach out to me at [nkimotou@gmail.com](nkimotou@gmail.com) for any questions or clarification. 
 
 ***
@@ -157,13 +166,18 @@ completed. To export the application, I will download the zipped file.
 
 `http://localhost:8000/ai_summarizer/`
 
+>If you're seeing "internal service error", retrace your steps above and make sure your container is still running. 
+> If it's not running, and it's exited, check Docker desktop for any console errors that need to be resolved.
+
 **Step 6:** Test your FastAPI service
 >You can test your service to make sure the summarization process is correctly working by using a Python script
 > that sends a post request to the FastAPI endpoint with the summary. The script prints the response in JSON format.
 > 
 > See included file 'tester.py' to test your service.
 > 
-> You can also test it directly on command line.
+> Here is the output of the included tester file:
+> 
+> <img height="40" src="/Users/nanamikimoto/Desktop/tester.png" width="500"/>
 
 ***
 ## How to create your own version from scratch
@@ -228,8 +242,10 @@ completed. To export the application, I will download the zipped file.
 > that sends a post request to the FastAPI endpoint with the summary. Instruct your script to print the response in JSON format.
 > 
 > See included file 'tester.py' to see how I tested mine.
+>
+> Here is the output of the included tester file:
 > 
-> You can also test it directly on command line.
+> <img height="40" src="/Users/nanamikimoto/Desktop/tester.png" width="500"/>
 ***
 
 ## Documentation

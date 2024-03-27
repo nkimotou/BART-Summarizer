@@ -13,7 +13,7 @@ WORKDIR /app
 # Copy the requirements.txt file into the docker container in your app folder
 COPY requirements.txt /app/
 
-# Install dependencies from the requirements.txt file
+# Install dependencies from the requirements.txt file or specify specific dependencies to pip install
 RUN pip install uvicorn
 RUN pip install fastapi
 RUN pip install transformers
