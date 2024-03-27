@@ -181,7 +181,7 @@ completed. To export the application, I will download the zipped file.
 > 
 > Here is the output of the included tester files:
 > 
-> <img height="50" src="/Users/nanamikimoto/Desktop/summary_tester.png" width="500"/>
+> <img height="50" src="summary_tester.png" width="500"/>
 > 
 > <img height="50" src="/Users/nanamikimoto/Desktop/compressed_tester.png" width="500"/>
 
@@ -252,7 +252,7 @@ completed. To export the application, I will download the zipped file.
 >
 > Here is the output of the included tester files:
 > 
-> <img height="50" src="/Users/nanamikimoto/Desktop/summary_tester.png" width="500"/>
+> <img height="50" src="summary_tester.png" width="500"/>
 > 
 > <img height="50" src="/Users/nanamikimoto/Desktop/compressed_tester.png" width="500"/>
 ***
