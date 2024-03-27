@@ -96,11 +96,13 @@ completed. To export the application, I will download the zipped file.
 > using the terminal. 
 > 
 > <img height="100" src="pcharmnav.png" width="500"/>
+
 > Once in the correct path, execute the following command:
 
 `docker build -t <docker_image_name>`
 >The terminal output should look like this:
-> <img height="300" src="pycharmterm.png" width="700"/>
+
+> <img height="400" src="pycharmterm.png" width="900"/>
 
 **Step 5:** Run Docker 
 > After setting up docker and building the image, run the container using the following command:
@@ -109,6 +111,7 @@ completed. To export the application, I will download the zipped file.
 
 > Here is what mine looks like:
 > <img height="20" src="dockerrun.png" width="600"/>
+
 > Check that your container is running properly by using the following command:
 
 `docker ps`
