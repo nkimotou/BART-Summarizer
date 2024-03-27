@@ -49,31 +49,40 @@ For each group of consecutive repeating characters in the summarized text:
 **Compressed Summary:**
 `Thus com2it2e2 me2ts an2ual2y to as2es2 the ef2ectivenes2 of policies on environmental protection.`
 
-******
+***
+## Developer Notes
+
+***
 ## Process
-Python environment and dependencies:
+**Python environment:**
 
 I'm using JetBrains PyCharm IDE running Python 3.12 on a 2023 Mac Studio M2 Max 32gb ram. 
 All of my commands are executed by accessing the terminal inside the IDE. 
 
+I'm starting on a working branch in the production repo. I will PR and merge into the master once 
+completed. To export the application, I will download the zipped file.
+
 **Imports and dependencies:**
--FastAPI package to import the FastAPI class to build the service, HTTPException to flag web status codes.
+
+-FastAPI package to import the FastAPI class to build the service, HTTPException to flag web server status codes.
+
 -Hugging Face transformers package to import the pipeline function for running tasks against models.
+
 -Pydantic package to import the BaseModel class for converting Python objects into usable JSON.
--Uvicorn to be used alongside FastAPI to run the web application in the localhost. 
 
-I'm starting on a working branch in the production repo. 
+-Uvicorn to be used alongside FastAPI to run the web application in the localhost.
+***
 
-Step 1: Package and directory
+**Step 1:** Package and directory
 > Create a package that will contain everything needed to run the application. In this case,
-> mine is called "Summarizer". When you create a package, it should auto creat your init.py file for you.
+> mine is called "Summarizer". When you create a package, it should auto create your init.py file for you.
 
-Step 2: Interpreter settings
+**Step 2:** Interpreter settings
 >Make sure your IDE has interpreter settings set to allow a virtual environment, or venv, to be used. 
 > This is what it should look like:
 > <img height="200" src="/Users/nanamikimoto/Desktop/Screenshot 2024-03-25 at 10.29.47 PM.png" width="400"/>
 
-Step 3: Create the files required inside your package
+**Step 3:** Create the files required inside your package
 > For this project, I want to create three:
 > 1. My app file that has my summarizer code in it
 > 2. My Dockerfile that has instructions to pass to Docker, in order to build the Docker Image.
@@ -81,7 +90,7 @@ Step 3: Create the files required inside your package
 > 
 > The structure can be seen above.
 
-Step 4: Set up Docker
+**Step 4:** Set up Docker
 > If you don't already have it installed, you can do so on command line or from
 > Docker's website. Once you've got your app package and files set up, navigate to your package directory
 > using the terminal. 
@@ -93,7 +102,7 @@ Step 4: Set up Docker
 >The terminal output should look like this:
 > <img height="300" src="/Users/nanamikimoto/Desktop/pycharmterm.png" width="700"/>
 
-Step 5: Run Docker 
+**Step 5:** Run Docker 
 > After setting up docker and building the image, run the container using the following command:
 
 `docker run -d -p <your_port:your_port> <docker_image_name>`
@@ -105,19 +114,22 @@ Step 5: Run Docker
 `docker ps`
 > This will return information about your running containers and their status.
 
-Step 6: Check your localhost!
+**Step 6:** Check your localhost!
 >You should now be able to access your service through your localhost. 
 
 `http://localhost:<your_port>/<docker_image_name>/`
 > In my case, mine looks like this:
 
 `http://localhost:8000/ai_summarizer/`
-*****
+***
+
 ## Documentation
-Hugging Face BART model for summarization:
+About the Hugging Face BART model for text summarization:
 https://huggingface.co/facebook/bart-large-cnn
 
 Installing and using FastAPI: https://fastapi.tiangolo.com/tutorial/
 
 Installing and using Docker to containerize apps: https://docs.docker.com/get-started/
+
+Installing and using Uvicorn for Python web server: https://www.uvicorn.org/#quickstart
 

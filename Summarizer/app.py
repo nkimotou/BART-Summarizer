@@ -30,7 +30,7 @@ class TextRequest(BaseModel):
 
 # Define endpoint in the FastAPI application to accept POST requests for summarize
 @app.post("/summarize/")
-async def summarize_text(request: TextRequest):
+async def summarize(request: TextRequest):
     try:
         # Get summarized text by setting summary = to the summarizer object that has specifying parameters for the model
         summary = summarizer(request.text, max_length=request.summary_length, min_length=30, do_sample=False)
