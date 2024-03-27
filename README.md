@@ -98,6 +98,9 @@ All of my commands are executed by accessing the terminal inside the IDE.
 -Pydantic package to import the BaseModel class for converting Python objects into usable JSON.
 
 -Uvicorn to be used alongside FastAPI to run the web application in the localhost.
+
+-Torch (pyTorch), Tensorflow, and Keras are required for the BART model to work. 
+
 ***
 ## How to run this application locally
 **Step 1:** Download this repo as a zip file and unzip it in your desired location
