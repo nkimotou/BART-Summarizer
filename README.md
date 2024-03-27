@@ -26,7 +26,7 @@ Create a FastAPI service that loads a pre-trained Hugging Face NLP model to do t
 -Containerize the FastAPI service using Docker, and provide a Dockerfile and instructions on how to build and run the Docker container.
 
 -Include a README that explains how to run a service.
-## BONUS
+## Optional (extension of the original task)
 After generating the summarized text, compress it using the following algorithm and return the compressed summary string.
 
 **Compress Summary Endpoint:** 
@@ -51,6 +51,13 @@ For each group of consecutive repeating characters in the summarized text:
 
 ***
 ## Developer Notes
+I've created this with the intention of making it very easy for someone not familiar with the used tools 
+to be able to run this application with no major issues. 
+
+I've left much more frequent comments in the included files than I usually would, in order to explain everything line by line. 
+Ideally, an intern should be able to take this app and fully understand everything from end to end. 
+
+Please reach out to me at [nkimotou@gmail.com](nkimotou@gmail.com) for any questions or clarification. 
 
 ***
 ## Process
@@ -72,7 +79,65 @@ completed. To export the application, I will download the zipped file.
 
 -Uvicorn to be used alongside FastAPI to run the web application in the localhost.
 ***
+## How to run this application locally 
+**Step 1:** Download this repo as a zip file
+><img height="300" src="/Users/nanamikimoto/Desktop/zip.png" width="400"/>
 
+**Step 2:** Dependencies
+> Make sure you have the necessary dependencies installed on your machine or inside your Python IDE.
+> The app.py and requirements.txt files show the dependencies required.
+>
+> From app.py:
+> 
+> `from fastapi import FastAPI, HTTPException`
+> 
+>`from transformers import pipeline`
+> 
+>`from pydantic import BaseModel`
+> 
+> From requirements.txt:
+> 
+> `fastapi`
+> 
+>`transformers`
+> 
+>`uvicorn`
+
+**Step 3:** Set up Docker and build the image
+> If you don't already have it installed, you can do so on command line or from
+> Docker's website. Navigate to the appropriate package directory inside the unzipped repo file
+> using the terminal. 
+> 
+> <img height="100" src="pcharmnav.png" width="600"/>
+
+> Once in the correct path, execute the following command:
+
+`docker build -t <docker_image_name>`
+>The terminal output should look similar to this:
+
+> <img height="400" src="pycharmterm.png" width="1000"/>
+
+**Step 4:** Run the Docker container
+> After setting up docker and building the image, run the container using the following command:
+
+`docker run -d -p <your_port:your_port> <docker_image_name>`
+
+> Here is what mine looks like:
+
+> <img height="25" src="dockerrun.png" width="650"/>
+
+> Check that your container is running properly by using the following command:
+
+`docker ps`
+> This will return information about your running containers and their status.
+
+**Step 5:** Check your localhost!
+>You should now be able to access this service through your localhost.
+
+`http://localhost:8000/ai_summarizer/`
+
+***
+## How to create your own version from scratch!
 **Step 1:** Package and directory
 > Create a package that will contain everything needed to run the application. In this case,
 > mine is called "Summarizer". When you create a package, it should auto create your init.py file for you.
@@ -91,7 +156,7 @@ completed. To export the application, I will download the zipped file.
 > 
 > The structure can be seen above.
 
-**Step 4:** Set up Docker
+**Step 4:** Set up Docker and build the image
 > If you don't already have it installed, you can do so on command line or from
 > Docker's website. Once you've got your app package and files set up, navigate to your package directory
 > using the terminal. 
@@ -101,11 +166,11 @@ completed. To export the application, I will download the zipped file.
 > Once in the correct path, execute the following command:
 
 `docker build -t <docker_image_name>`
->The terminal output should look like this:
+>The terminal output should look similar to this:
 
 > <img height="400" src="pycharmterm.png" width="1000"/>
 
-**Step 5:** Run Docker 
+**Step 5:** Run the Docker container
 > After setting up docker and building the image, run the container using the following command:
 
 `docker run -d -p <your_port:your_port> <docker_image_name>`
