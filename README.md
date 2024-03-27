@@ -112,7 +112,7 @@ completed. To export the application, I will download the zipped file.
 
 > Here is what mine looks like:
 
-> <img height="30" src="dockerrun.png" width="650"/>
+> <img height="25" src="dockerrun.png" width="650"/>
 
 > Check that your container is running properly by using the following command:
 
