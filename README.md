@@ -142,6 +142,7 @@ completed. To export the application, I will download the zipped file.
 > This will return information about your running containers and their status.
 > 
 > It should look similar to this:
+> 
 > <img height="300" src="pycharmterm.png" width="500"/>
 
 **Step 4:** Check your localhost!
@@ -189,6 +190,7 @@ completed. To export the application, I will download the zipped file.
 `docker ps`
 > This will return information about your running containers and their status.
 > This is what my docker process looks like:
+> 
 > <img height="300" src="pycharmterm.png" width="500"/>
 
 
