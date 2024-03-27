@@ -157,6 +157,14 @@ completed. To export the application, I will download the zipped file.
 
 `http://localhost:8000/ai_summarizer/`
 
+**Step 6:** Test your FastAPI service
+>You can test your service to make sure the summarization process is correctly working by using a Python script
+> that sends a post request to the FastAPI endpoint with the summary. The script prints the response in JSON format.
+> 
+> See included file 'tester.py' to test your service.
+> 
+> You can also test it directly on command line.
+
 ***
 ## How to create your own version from scratch
 **Step 1:** Package and directory
@@ -214,6 +222,14 @@ completed. To export the application, I will download the zipped file.
 > In my case, mine looks like this:
 
 `http://localhost:8000/ai_summarizer/`
+
+**Step 6:** Test your FastAPI service
+>You can test the service to make sure the summarization process is correctly working by writing a Python script
+> that sends a post request to the FastAPI endpoint with the summary. Instruct your script to print the response in JSON format.
+> 
+> See included file 'tester.py' to see how I tested mine.
+> 
+> You can also test it directly on command line.
 ***
 
 ## Documentation
