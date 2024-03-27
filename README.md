@@ -64,6 +64,10 @@ For each group of consecutive repeating characters in the summarized text:
 I've created this with the intention of making it very easy for someone not familiar with the used tools 
 to be able to run this application with no major issues. 
 
+There are two sections for running this application. One that shows how to run this very same
+application I've built, and another that shows how you can build your own based on what I've done.
+They are similar instructions, save for a few differences in wording and requirements. 
+
 I've left much more frequent comments in the included files than I usually would, in order to explain everything line by line. 
 Ideally, an intern should be able to take this app and fully understand everything from end to end. 
 
@@ -74,7 +78,7 @@ in the Dockerfile:
 
 However, I ran into some issues using this method. I directly specified which dependencies to pip install
 depending on what Docker container errors I had. I have left the file the way I am running it locally. You may 
-use either of these methods. 
+use either of these methods.
 
 Please reach out to me at [nkimotou@gmail.com](nkimotou@gmail.com) for any questions or clarification. 
 
@@ -173,11 +177,14 @@ completed. To export the application, I will download the zipped file.
 >You can test your service to make sure the summarization process is correctly working by using a Python script
 > that sends a post request to the FastAPI endpoint with the summary. The script prints the response in JSON format.
 > 
-> See included file 'tester.py' to test your service.
+> See included files 'summary_tester.py' and 'compressed_summary_tester.py' to test your service.
 > 
-> Here is the output of the included tester file:
+> Here is the output of the included tester files:
 > 
-> <img height="40" src="/Users/nanamikimoto/Desktop/tester.png" width="500"/>
+> <img height="50" src="/Users/nanamikimoto/Desktop/summary_tester.png" width="500"/>
+> 
+> <img height="50" src="/Users/nanamikimoto/Desktop/compressed_tester.png" width="500"/>
+
 
 ***
 ## How to create your own version from scratch
@@ -241,11 +248,13 @@ completed. To export the application, I will download the zipped file.
 >You can test the service to make sure the summarization process is correctly working by writing a Python script
 > that sends a post request to the FastAPI endpoint with the summary. Instruct your script to print the response in JSON format.
 > 
-> See included file 'tester.py' to see how I tested mine.
+> See included files 'summary_tester.py' and 'compressed_summary_tester.py' to test your service.
 >
-> Here is the output of the included tester file:
+> Here is the output of the included tester files:
 > 
-> <img height="40" src="/Users/nanamikimoto/Desktop/tester.png" width="500"/>
+> <img height="50" src="/Users/nanamikimoto/Desktop/summary_tester.png" width="500"/>
+> 
+> <img height="50" src="/Users/nanamikimoto/Desktop/compressed_tester.png" width="500"/>
 ***
 
 ## Documentation
