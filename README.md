@@ -110,6 +110,7 @@ completed. To export the application, I will download the zipped file.
 `docker run -d -p <your_port:your_port> <docker_image_name>`
 
 > Here is what mine looks like:
+
 > <img height="20" src="dockerrun.png" width="600"/>
 
 > Check that your container is running properly by using the following command:
