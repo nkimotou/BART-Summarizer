@@ -90,7 +90,7 @@ completed. To export the application, I will download the zipped file.
 -Uvicorn to be used alongside FastAPI to run the web application in the localhost.
 ***
 ## How to run this application locally
-**Step 1:** Download this repo as a zip file
+**Step 1:** Download this repo as a zip file and unzip it in your desired location
 ><img height="250" src="zip.png" width="300"/>
 
 **Step 2:** Dependencies
@@ -112,8 +112,16 @@ completed. To export the application, I will download the zipped file.
 >`transformers`
 > 
 >`uvicorn`
+> 
+> `torch`
+> 
+> `tensorflow`
+> 
+> `tf-keras`
+> 
+>**Note:** Torch, Tensorflow, and Keras as required to use the BART model from Hugging Face. 
 
-**Step 3:** Set up Docker and build the image
+**Step 4:** Set up Docker, build the image, and run the container
 > If you don't already have it installed, you can do so on command line or from
 > Docker's website. Navigate to the appropriate package directory inside the unzipped repo file
 > using the terminal. 
@@ -122,26 +130,21 @@ completed. To export the application, I will download the zipped file.
 
 > Once in the correct path, execute the following command:
 
-`docker build -t <docker_image_name>`
->The terminal output should look similar to this:
+`docker build -t ai_summarizer .`
 
-> <img height="400" src="pycharmterm.png" width="1000"/>
-
-**Step 4:** Run the Docker container
 > After setting up docker and building the image, run the container using the following command:
 
-`docker run -d -p <your_port:your_port> <docker_image_name>`
-
-> Here is what mine looks like:
-
-> <img height="25" src="dockerrun.png" width="650"/>
+`docker run -d -p 8000:8000 ai_summarizer`
 
 > Check that your container is running properly by using the following command:
 
 `docker ps`
 > This will return information about your running containers and their status.
+> 
+> It should look similar to this:
+> <img height="300" src="/Users/nanamikimoto/Desktop/pycharmterm.png" width="500"/>
 
-**Step 5:** Check your localhost!
+**Step 4:** Check your localhost!
 >You should now be able to access this service through your localhost.
 
 `http://localhost:8000/ai_summarizer/`
@@ -159,16 +162,16 @@ completed. To export the application, I will download the zipped file.
 > <img height="200" src="layout.png" width="400"/>
 
 **Step 3:** Create the files required inside your package
-> For this project, I want to create three:
-> 1. My app file that has my summarizer code in it
-> 2. My Dockerfile that has instructions to pass to Docker, in order to build the Docker Image.
-> 3. My requirements.txt that has my required dependencies in order for the application to run containerized in Docker.
+> For this project, you want to create three files:
+> 1. Your app file that has the summarizer code in it
+> 2. Your Dockerfile that has instructions to pass to Docker, in order to build the Docker Image.
+> 3. Your requirements.txt that has my required dependencies in order for the application to run containerized in Docker.
 > 
 > The structure can be seen above.
 
-**Step 4:** Set up Docker and build the image
+**Step 4:** Set up Docker, build the image, and run the container
 > If you don't already have it installed, you can do so on command line or from
-> Docker's website. Once you've got your app package and files set up, navigate to your package directory
+> Docker's website. Navigate to the appropriate package directory inside the unzipped repo file
 > using the terminal. 
 > 
 > <img height="100" src="pcharmnav.png" width="600"/>
@@ -176,25 +179,20 @@ completed. To export the application, I will download the zipped file.
 > Once in the correct path, execute the following command:
 
 `docker build -t <docker_image_name>`
->The terminal output should look similar to this:
 
-> <img height="400" src="pycharmterm.png" width="1000"/>
-
-**Step 5:** Run the Docker container
 > After setting up docker and building the image, run the container using the following command:
 
 `docker run -d -p <your_port:your_port> <docker_image_name>`
-
-> Here is what mine looks like:
-
-> <img height="25" src="dockerrun.png" width="650"/>
 
 > Check that your container is running properly by using the following command:
 
 `docker ps`
 > This will return information about your running containers and their status.
+> This is what my docker process looks like:
+> <img height="300" src="/Users/nanamikimoto/Desktop/pycharmterm.png" width="500"/>
 
-**Step 6:** Check your localhost!
+
+**Step 5:** Check your localhost!
 >You should now be able to access your service through your localhost. 
 
 `http://localhost:<your_port>/<docker_image_name>/`
