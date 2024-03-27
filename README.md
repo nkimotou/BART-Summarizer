@@ -149,7 +149,7 @@ completed. To export the application, I will download the zipped file.
 > 
 > This is what it should look like:
 > 
-> <img height="150" src="/Users/nanamikimoto/Desktop/container.png" width="400"/>
+> <img height="150" src="container.png" width="400"/>
 
 
 **Step 4:** Check your localhost!
@@ -204,7 +204,7 @@ completed. To export the application, I will download the zipped file.
 > 
 > This is what mine looks like using Docker desktop on Mac:
 > 
-> <img height="150" src="/Users/nanamikimoto/Desktop/container.png" width="400"/>
+> <img height="150" src="container.png" width="400"/>
 
 
 **Step 5:** Check your localhost!
