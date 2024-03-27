@@ -80,6 +80,7 @@ completed. To export the application, I will download the zipped file.
 **Step 2:** Interpreter settings
 >Make sure your IDE has interpreter settings set to allow a virtual environment, or venv, to be used. 
 > This is what it should look like:
+
 > <img height="200" src="layout.png" width="400"/>
 
 **Step 3:** Create the files required inside your package
