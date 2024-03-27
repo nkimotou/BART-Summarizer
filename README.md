@@ -152,7 +152,7 @@ completed. To export the application, I will download the zipped file.
 > <img height="150" src="container.png" width="400"/>
 
 
-**Step 4:** Check your localhost!
+**Step 5:** Check your localhost!
 >You should now be able to access this service through your localhost.
 
 `http://localhost:8000/ai_summarizer/`
