@@ -1,5 +1,10 @@
 import requests
 
+"""
+This is a tester file that allows you to test if the asynchronous function 'compress_summary' from app.py is working.
+Your docker container must be running and your local host should be available to you (no internal server issues).
+"""
+
 # Set url = your local host address where your containerized application is deployed from docker
 url = "http://localhost:8000/compress_summary/"
 # Input the data you'd like to be compressed
