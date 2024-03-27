@@ -1,3 +1,6 @@
 fastapi
 transformers
 uvicorn
+torch
+tensorflow
+tf-keras

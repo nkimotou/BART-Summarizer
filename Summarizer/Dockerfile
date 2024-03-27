@@ -14,7 +14,12 @@ WORKDIR /app
 COPY requirements.txt /app/
 
 # Install dependencies from the requirements.txt file
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install uvicorn
+RUN pip install fastapi
+RUN pip install transformers
+RUN pip install torch
+RUN pip install tensorflow
+RUN pip install tf-keras
 
 # Copy contents of the directory into your app folder
 COPY . /app/
