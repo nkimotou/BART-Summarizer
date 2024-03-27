@@ -145,6 +145,13 @@ completed. To export the application, I will download the zipped file.
 > 
 > <img height="300" src="pycharmterm.png" width="500"/>
 
+>If you have Docker desktop installed, you can also check the status of your containers that way.
+> 
+> This is what it should look like:
+> 
+> <img height="150" src="/Users/nanamikimoto/Desktop/container.png" width="400"/>
+
+
 **Step 4:** Check your localhost!
 >You should now be able to access this service through your localhost.
 
@@ -192,6 +199,12 @@ completed. To export the application, I will download the zipped file.
 > This is what my docker process looks like:
 > 
 > <img height="300" src="pycharmterm.png" width="500"/>
+
+>If you have Docker desktop installed, you can also check the status of your containers that way.
+> 
+> This is what mine looks like using Docker desktop on Mac:
+> 
+> <img height="150" src="/Users/nanamikimoto/Desktop/container.png" width="400"/>
 
 
 **Step 5:** Check your localhost!
