@@ -89,9 +89,6 @@ Please reach out to me at [nkimotou@gmail.com](nkimotou@gmail.com) for any quest
 I'm using JetBrains PyCharm IDE running Python 3.12 on a 2023 Mac Studio M2 Max 32gb ram. 
 All of my commands are executed by accessing the terminal inside the IDE. 
 
-I'm starting on a working branch in the production repo. I will PR and merge into the master once 
-completed. To export the application, I will download the zipped file.
-
 **Imports and dependencies:**
 
 -FastAPI package to import the FastAPI class to build the service, HTTPException to flag web server status codes.
