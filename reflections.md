@@ -56,3 +56,7 @@ test for general validation of input text
 - Docker is better for smaller scale, local apps 
 - Kubernetes is better for large scale apps that need high availability 
 - Kubernetes has built-in load balancing abilities 
+
+9. User Feedback
+- Integrate a rating system or feedback endpoint
+- 
