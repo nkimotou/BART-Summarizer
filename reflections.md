@@ -59,4 +59,3 @@ test for general validation of input text
 
 9. User Feedback
 - Integrate a rating system or feedback endpoint
-- 
