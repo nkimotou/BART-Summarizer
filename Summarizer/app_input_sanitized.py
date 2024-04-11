@@ -8,17 +8,17 @@ app = FastAPI()
 
 # Pydantic model for text input
 class TextInput(BaseModel):
-    text: str = Field(..., title="Text", description="Input text to process")
+    text: str = Field(..., title="Text", description="summary_text")
 
 # Pydantic model for summarization request
 class SummarizeRequest(BaseModel):
-    text: str = Field(..., title="Text", description="Input text to summarize")
-    summary_length: Optional[int] = Field(50, ge=1, le=100, title="Summary Length", description="Length of the summary")
+    text: str = Field(..., title="Text", description="summary_text")
+    summary_length: Optional[int] = Field(50, ge=1, le=100, title="Summary Length", description="summary_length")
 
 # Pydantic model for compression request
 class CompressionRequest(BaseModel):
-    text: str = Field(..., title="Text", description="Input text to compress")
-    summary_length: Optional[int] = Field(50, ge=1, le=100, title="Summary Length", description="Length of the summary")
+    text: str = Field(..., title="Text", description="compress_text")
+    summary_length: Optional[int] = Field(50, ge=1, le=100, title="Summary Length", description="summary_length")
 
 # Dependency to validate input text
 def validate_input_text(text_input: TextInput):
@@ -43,7 +43,7 @@ def validate_compression_request(request: CompressionRequest):
 async def summarize(text: str = Depends(validate_input_text), request: SummarizeRequest = Depends(validate_summarize_request)):
     try:
         # Perform summarization here using the 'text' and 'request.summary_length'
-        summary_text = "This is a summarized text."
+        summary_text = "summarized_text goes here"
         return JSONResponse(content=jsonable_encoder({"Summary": summary_text}), status_code=200)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -53,7 +53,7 @@ async def summarize(text: str = Depends(validate_input_text), request: Summarize
 async def compress_summary(text: str = Depends(validate_input_text), request: CompressionRequest = Depends(validate_compression_request)):
     try:
         # Perform compression here using the 'text' and 'request.summary_length'
-        compressed_text = "This is a compressed text."
+        compressed_text = "compressed_text goes here"
         return JSONResponse(content=jsonable_encoder({"Compressed_summary": compressed_text}), status_code=200)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

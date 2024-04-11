@@ -11,7 +11,7 @@ def test_invalid_json(endpoint):
 
 def test_summarize():
     # Test valid summarization request
-    text = "This is a sample text for summarization."
+    text = "summary_text test"
     response = client.post("/summarize/", json={"text": text})
     assert response.status_code == 200
     assert "Summary" in response.json()
