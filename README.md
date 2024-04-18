@@ -1,5 +1,5 @@
 # AI_Powered_Summarization
-Rad AI ML infrastructure engineer challenge
+BART model text summarization 
 
 ## Table of Contents
 
@@ -86,10 +86,6 @@ use either of these methods.
 > check your containers in Docker desktop. You'll be able to see any console errors and resolve those. 
 > typically, it will be import issues. You may have to import other things depending on how your IDE is set up and 
 > what you already have installed. 
-
-
-
-Please reach out to me at [nkimotou@gmail.com](nkimotou@gmail.com) for any questions or clarification. 
 
 ***
 ## Process
