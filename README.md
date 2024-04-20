@@ -1,4 +1,4 @@
-# AI_Powered_Summarization
+# BARt Summarizer
 BART model text summarization 
 
 ## Table of Contents
