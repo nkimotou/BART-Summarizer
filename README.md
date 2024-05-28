@@ -1,4 +1,4 @@
-# BARt Summarizer
+# BART Summarizer
 BART model text summarization 
 
 ## Table of Contents
